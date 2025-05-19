@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <v-navigation-drawer app v-model="drawer">
-
       <v-list-item>
       <v-list-item-content>
             <v-list-item-title class="title">
@@ -33,6 +32,11 @@
     </v-navigation-drawer>
     <v-app-bar app dark color="primary">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title>
+      <v-btn to="/">
+      Home
+      </v-btn>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
           <v-toolbar-items class="hidden-sm-and-down">
         <v-btn v-for="link in links" :key="link.title" :to="link.url">
