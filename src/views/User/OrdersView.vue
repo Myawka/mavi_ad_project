@@ -10,7 +10,7 @@
 
                         <template v-slot:prepend>
                             <v-list-item-action>
-                              <v-checkbox :input-value="order.done" color="primary"></v-checkbox>
+                              <v-checkbox :input-value="order.done" color="primary" @click="markDone(order)"></v-checkbox>
                             </v-list-item-action>
                         </template>
 
