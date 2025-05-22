@@ -48,10 +48,7 @@
 export default {
 data () {
   return {
-    valid: false,
-	  title: "",
-	  description: "",
-	  promo: true
+    valid: false, title: "", description: "", promo: true
     }
   },
   methods: {
@@ -65,5 +62,6 @@ data () {
 	console.log(ad)
 	}
     }
+  }
 }
 </script>
