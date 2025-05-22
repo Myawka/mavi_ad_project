@@ -17,7 +17,7 @@
                   </v-card-actions>
               </v-col>
           </v-row>
-        </v-card>>
+        </v-card>
       </v-col>
     </v-row>
   </v-container>
