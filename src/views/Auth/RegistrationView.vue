@@ -75,7 +75,7 @@ data () {
 				email: this.email,
 				password: this.password
 			}
-			this.$store.dispatch('registerUser', user)
+		this.$store.dispatch('registerUser', user)
 		}
         }
       }
