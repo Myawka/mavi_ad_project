@@ -10,7 +10,7 @@ export default {
 	state: {
      user: null
 },
-	 mutations: {
+	mutations: {
     setUser(state, payload) {
       console.log(payload);
       state.user = payload;
