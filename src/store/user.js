@@ -20,6 +20,8 @@ export default {
     registerUser({ commit }, { email, password }) {
       //Здесь запрос на сервер для регистрации
       commit("setUser", new User(1, email, password));
+      commit("clearError");
+      commit("setLoading", true);
     },
   },
 	getters: {
