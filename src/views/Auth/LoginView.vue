@@ -55,6 +55,21 @@ data () {
         v => !!v || 'Password is required',
         v => (v && v.length >= 6) || 'Password must be more or equal than 6 characters'
       ],
+      onSubmit(){
+        if (this.$refs.form.validate()){
+          const user = {
+            email: this.email,
+            password: this.password
+          }
+          this.$store.dispatch('loginUser', user)
+          .then(() => {
+            this.$router.push("/")
+          })
+          .catch((err) => {
+            console.log(err.message)
+          })
+        }
+      },
       methods: {
         onSubmit(){if (this.$refs.form.validate()){
 			const user = {
