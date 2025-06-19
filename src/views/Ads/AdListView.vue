@@ -3,7 +3,7 @@
     <v-row justify="center">
       <v-col cols="12" sm="8" lg="6">
         <h1 class="text--secondary mb-3 mt-3">My ads</h1>
-        <v-card 
+        <v-card
           class="elevation-10 mb-5"
           v-for="ad in myAds"
           :key="ad.id"
@@ -18,8 +18,8 @@
               <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn color="primary" variant="text" :to="'/ad/' + ad.id">Open</v-btn>
-                <!-- Добавляем компонент EditAdModal для каждого объявления -->
-                <EditAdModal :ad="ad" />
+                <EditAdModal :ad="ad" v-if="isOwner(ad)"></EditAdModal>
+                <v-btn class="success">Buy</v-btn>
               </v-card-actions>
             </v-col>
           </v-row>
@@ -30,15 +30,20 @@
 </template>
 
 <script>
-import EditAdModal from './EditAdModal.vue'; 
+import EditAdModal from './EditAdModal.vue';
 
 export default {
   components: {
-    EditAdModal, 
+    EditAdModal,
   },
   computed: {
     myAds() {
       return this.$store.getters.myAds;
+    },
+    isOwner() {
+      return (ad) => {
+        return ad.userId === this.$store.getters.user?.id;
+      };
     },
   },
 };
