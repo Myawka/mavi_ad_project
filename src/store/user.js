@@ -70,4 +70,5 @@ export default {
       return state.user !== null
     },
   },
+  
 };
