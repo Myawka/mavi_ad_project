@@ -82,6 +82,13 @@ data () {
 				password: this.password
 			}
 			this.$store.dispatch('registerUser', user)
+      .then(() => {
+        this.$router.push("/")
+      })
+      .catch((err) => {
+        console.log(err.message)
+      })
+
 		}
         }
       }
