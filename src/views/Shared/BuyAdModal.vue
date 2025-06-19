@@ -74,7 +74,7 @@
                         this.modal = false
                     })
             }
-        },   
+        }   
       }
     }
   </script>
