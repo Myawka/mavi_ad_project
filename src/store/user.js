@@ -41,7 +41,7 @@ export default {
     },
     async loginUser({ commit }, { email, password }) {
       commit("clearError");
-      commit("setLoading", false);
+      commit("setLoading", true);
       //Здесь выполняется запрос на сервер
       let isRequestOk = true;
       let promise = new Promise(function (resolve) {
