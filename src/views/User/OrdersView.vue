@@ -54,10 +54,10 @@ export default {
         }
     },
 
-    computed: {
-        orders() {
-            return this.$store.getters.orders
-        }
-    },
+      computed: {
+          orders() {
+              return this.$store.getters.orders
+          }
+      },
 }
 </script>
