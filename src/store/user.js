@@ -21,7 +21,7 @@ export default {
       commit("clearError");
       commit("setLoading", true);
       //Здесь выполняется запрос на сервер
-      let isRequestOk = false;
+      let isRequestOk = true;
       let promise = new Promise(function (resolve) {
         setTimeout(() => resolve("Done"), 3000);
       });
@@ -43,7 +43,7 @@ export default {
       commit("clearError");
       commit("setLoading", true);
       //Здесь выполняется запрос на сервер
-      let isRequestOk = false;
+      let isRequestOk = true;
       let promise = new Promise(function (resolve) {
         setTimeout(() => resolve("Done"), 3000);
       });
